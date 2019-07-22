@@ -5,16 +5,16 @@ Author URI : http://www.wpfreeware.com/
 ========================================*/
 
 .navbar-default .navbar-brand span{
-  color: #c43b23;
+  color: #932D2B;
 }
 .navbar-default .navbar-brand span{
-  color: #c43b23;
+  color: #932D2B;
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-    color: #c43b23;
+    color: #932D2B;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-   color: #c43b23;
+   color: #932D2B;
 }
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
   color: #78ADC9 !important;  
@@ -172,11 +172,11 @@ Author URI : http://www.wpfreeware.com/
   border: 1px solid #78ADC9;
 }
 .wpcf7-submit {
-  border: 1px solid #78adc9;
-  color: #78adc9;  
+  border: 1px solid #932D2B;
+  color: #932D2B;  
 }
 .wpcf7-submit:hover,.wpcf7-submit:focus{
-  background-color: #78ADC9;
+  background-color: #932D2B;
   color: #ffffff;
 }
 .footer_widget_nav li a {

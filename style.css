@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h2 {
-  color: #313338;  
+  color: #932D2B;  
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
@@ -142,7 +142,7 @@ img{
   width: 100%;
 }
 .navbar-default .navbar-brand {
-  color: #fff;
+  color: #942D2B;
   font-size: 25px;
   font-weight: bold;
   margin-top: 15px; 
@@ -152,12 +152,12 @@ img{
   color: #fff;
 }
 .navbar-default {
-  background-color: #313b3d;
+  background-color: #a2b0ba;
   border-color: transparent;
 }
 #navbar{overflow-x: hidden;}
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
+  color: #ffff;
   padding: 30px 15px;
   text-transform: uppercase;
   -webkit-transition: all 0.5s;
@@ -237,15 +237,15 @@ img{
   left: 38%;
 }
 .slider_caption h2 {
-  color: #fff;
+  color: #932D2B;
   font-size: 33px;
-  background-color: rgba(49, 59, 61, 0.6);
+  background-color: rgba(162, 176, 186, 0.6);
   padding: 8px;
   margin-bottom: 5px;
   text-transform: uppercase;
 }
 .slider_caption p {
-  background-color: rgba(49, 59, 61, 0.6);
+  background-color: rgba(162, 176, 186, 0.6);
   color: #fff;
   font-family: "Varela",sans-serif;
   font-size: 15px;
@@ -472,6 +472,7 @@ img{
   transform:scale(0.9);
 }
 .single_whyus_top>h3{
+  color: #932D2B;
   font-size: 18px;
   font-weight: bold;
 }
@@ -967,7 +968,45 @@ div[data-dimension] {
 /*--------------------*/
 /* COURSE ARCHIVE PAGE */
 /*--------------------*/
+.logo {
+  width: 170px;
+  height: auto;
+  margin-top: -10px;
 
+}
+.panel {
+  width: 300px;
+  height: 2px;
+  border-radius: 2em;
+  background: #922D2C;
+}
+.circle {
+  background-image: url("https://s4.aconvert.com/convert/p3r68-cdx67/cb9qk-3h2cq.svg");
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  animation: PopUp 1.5s ease-in infinite;
+}
+@keyframes PopUp {
+  0% {
+    transform: translate3d(0px, 0px, 0);
+  }
+  20% {
+    transform: translate3d(20px, -50px, 0) rotate(20deg);
+  }
+  40% {
+    transform: translate3d(40px, 0px, 0) rotate(40deg);
+  }
+  60%{
+    transform: translate3d(60px, -50px, 0) rotate(60deg);
+  }
+  80% {
+    transform: translate3d(80px, 0px, 0) rotate(80deg);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) rotate(100deg);
+  }
+}
 #imgBanner {
   background-image: url("img/banner.jpg");
   background-repeat: no-repeat;
@@ -981,7 +1020,7 @@ div[data-dimension] {
   width: 100%;
 }
 #imgBanner h2 {
-  color: #fff;
+  color: #932D2B;
   font-size: 72px;
   font-weight: bold;
   text-align: center;
