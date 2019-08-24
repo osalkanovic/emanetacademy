@@ -992,13 +992,13 @@ div[data-dimension] {
     transform: translate3d(0px, 0px, 0);
   }
   20% {
-    transform: translate3d(20px, -50px, 0) rotate(20deg);
+    transform: translate3d(20px, -55px, 0) rotate(20deg);
   }
   40% {
     transform: translate3d(40px, 0px, 0) rotate(40deg);
   }
   60%{
-    transform: translate3d(60px, -50px, 0) rotate(60deg);
+    transform: translate3d(60px, -55px, 0) rotate(60deg);
   }
   80% {
     transform: translate3d(80px, 0px, 0) rotate(80deg);
@@ -1007,7 +1007,7 @@ div[data-dimension] {
     transform: translate3d(0px, 0px, 0) rotate(100deg);
   }
 }
-#imgBanner {
+#imgBanner {    
   background-image: url("img/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
