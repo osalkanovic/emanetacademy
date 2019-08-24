@@ -215,7 +215,7 @@
          // Loop Through All Input Fields
          for(i = 0; i < target.length; ++i) {
             // Check to make sure it's a value. Don't need to include Buttons
-            if(target[i].type != 'text' && target[i].type != 'textarea') {
+            if(target[i].type != 'text') {
                    // Skip to next input since this one doesn't match our rules
                continue;
             }
@@ -224,7 +224,7 @@
             message += target[i].name + ': ' + target[i].value + "\r\n";
          }
          // Modify the hidden body input field that is required for the mailto: scheme
-         target.elements["body"].value = message;
+         target.elements["E-Mail Address"].value = message;
    
          // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
          this.submit();
