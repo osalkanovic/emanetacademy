@@ -117,9 +117,9 @@
        <div class="row">
          <div class="col-lg-8 col-md-8 col-sm-8">
            <div class="contact_form wow fadeInLeft">
-              <form class="submitphoto_form" method="GET" action="mailto:osalkanovic5@gmail.com" enctype="text/plain">
+              <form class="submitphoto_form">
                 <input type="text" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
-                <input type="E-Mail Address" class="wp-form-control wpcf7-email" placeholder="Email adresa">          
+                <input type="mail" class="wp-form-control wpcf7-email" placeholder="Email adresa">          
                 <input type="submit" value="Posalji" class="wpcf7-submit">
               </form>
            </div>
@@ -201,35 +201,7 @@
 
     <!-- Javascript Files
     ================================================== -->
-    <script>
-      var form = document.getElementsByTagName('form')[0];
-      form.addEventListener('submit',contact,false);
-      function contact(e) {
-         // Prevent Default Form Submission
-         e.preventDefault();
-   
-         var target = e.target || e.srcElement;
-         var i = 0;
-         var message = '';
-   
-         // Loop Through All Input Fields
-         for(i = 0; i < target.length; ++i) {
-            // Check to make sure it's a value. Don't need to include Buttons
-            if(target[i].type != 'text') {
-                   // Skip to next input since this one doesn't match our rules
-               continue;
-            }
-   
-            // Add Input Name and value followed by a line break
-            message += target[i].name + ': ' + target[i].value + "\r\n";
-         }
-         // Modify the hidden body input field that is required for the mailto: scheme
-         target.elements["E-Mail Address"].value = message;
-   
-         // Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
-         this.submit();
-      }
-   </script>
+
     <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Preloader js file -->
