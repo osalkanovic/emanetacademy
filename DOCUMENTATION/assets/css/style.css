@@ -209,7 +209,7 @@ svg {
 
 .slide:nth-child(1) .slide__bg {
     left: 0;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg");
+    background-image: url("../../../img/senad.jpg");
 }
 
 
@@ -238,7 +238,7 @@ svg {
 
 .slide:nth-child(2) .slide__bg {
     left: -50%;
-    background-image: url("../../../img//IMG_0951.jpg");
+    background-image: url("../../../img/gallery/aminaadin.jpg");
 }
 
 
@@ -251,7 +251,7 @@ svg {
 @media (max-width: 991px) {
     /* line 176, ../compass/sass/style.scss */
     .slide:nth-child(2) .slide__text {
-        background-color: rgba(225, 204, 174, 0.8);
+        background-color: rgba(250, 234, 212, 0.8);
     }
 }
 
@@ -267,7 +267,7 @@ svg {
 
 .slide:nth-child(3) .slide__bg {
     left: -100%;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-1.jpg");
+    background-image: url("../../../img/gallery/zorjana.jpg");
 }
 
 
