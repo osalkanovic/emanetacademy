@@ -162,7 +162,7 @@
                 <!-- Start about us area -->
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="aboutus_area wow fadeInLeft">
-                        <div class="circle"></div>
+                        <div id="circle-aboutUs" class="circle"></div>
                         <h2 class="titile">O nama</h2>
                         <p>Vodeci problem Bosne i Hercegovine je nezaposlenost. Velika vecina ljudi ili nije zaposlena ili rade poslove koji su slabo placeni, a taj problem se najvise javlja u povratnickim mjestima Bosne i Hercegovine. Kako bi pomogli tim
                             mjestima odlucili smo da pokrenemo IT Akademiju koja Vam nudi besplatan kurs, te i besplatno ucenje stranih jezika. Nakon sestomjesecne obuke, dobijate zaposljenje za rad od kuce.</p>
@@ -392,6 +392,14 @@
             });
 
         });
+    </script>
+    <script>
+    window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
+    console.log('scroll', scroll);
+    
+    
+});
     </script>
     <!--=============================================== 
     Template Design By WpFreeware Team.
