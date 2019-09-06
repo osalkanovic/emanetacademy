@@ -18,11 +18,7 @@
 /* line 29, ../compass/sass/style.scss */
 
 
-
-
 /* line 36, ../compass/sass/style.scss */
-
-
 
 
 /* line 40, ../compass/sass/style.scss */
@@ -386,7 +382,6 @@ svg {
 /* line 255, ../compass/sass/style.scss */
 
 .slide__text-heading {
-  
     font-size: 5rem;
     margin-bottom: 2rem;
 }
@@ -405,7 +400,7 @@ svg {
 .slide__text-desc {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 16.5rem;
 }
 
 @media (max-width: 991px) {

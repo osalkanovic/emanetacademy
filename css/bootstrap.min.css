@@ -57,7 +57,7 @@ a {
 
 a:active,
 a:hover {
-    outline: 0
+    outline: 0 color: grey;
 }
 
 abbr[title] {
@@ -1378,8 +1378,6 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff
@@ -5279,7 +5277,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
     color: #555;
-    background-color: #e7e7e7
+    background-color: #e7e7e7;
 }
 
 .navbar-default .navbar-nav>.disabled>a,
@@ -5430,6 +5428,9 @@ fieldset[disabled] .navbar-default .btn-link:hover {
 }
 
 @media (max-width:767px) {
+    .container {
+        padding-bottom: 15px;
+    }
     .navbar-inverse .navbar-nav .open .dropdown-menu>.dropdown-header {
         border-color: #080808
     }
