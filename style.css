@@ -2632,7 +2632,7 @@ div[data-dimension] {
 @media(max-width:320px) {}
 
 .typewriter {
-    color: #922D2C;
+    color: white;
     font-size: 45px;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
@@ -2644,8 +2644,25 @@ div[data-dimension] {
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
     /* Adjust as needed */
-    animation: typing 7s steps(40) infinite, blink-caret .25s step-end infinite;
-    width: 420px;
+    animation: typing 2s steps(40) infinite, blink-caret .25s step-end infinite;
+    width: 100px;
+}
+
+.typerwriter {
+    color: white;
+    font-size: 45px;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 5s steps(40) infinite, blink-caret .25s step-end infinite;
+    width: 470px;
 }
 
 
@@ -2656,7 +2673,7 @@ div[data-dimension] {
         width: 0
     }
     to {
-        width: 420px;
+        width: 450px;
     }
 }
 
@@ -2669,6 +2686,6 @@ div[data-dimension] {
         border-color: transparent
     }
     50% {
-        border-color: #922D2C;
+        border-color: white;
     }
 }
