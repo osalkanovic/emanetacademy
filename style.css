@@ -39,9 +39,17 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 /*--------------------*/
 
+@font-face {
+    font-family: 'Sweet Buttermilk Sans Free';
+    src: url('./fonts/Fonts/Sweet\ Buttermilk\ Sans\ Free.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
 body,
 html {
     overflow-x: hidden;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -92,7 +100,6 @@ html {
 }
 
 body {
-    font-family: 'Merriweather', serif;
     overflow-x: hidden !important;
 }
 
@@ -119,7 +126,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Varela', sans-serif;
+    font-family: 'Sweet Buttermilk Sans Free';
 } */
 
 
