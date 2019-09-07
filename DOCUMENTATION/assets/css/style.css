@@ -8,17 +8,10 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: 'Sweet Buttermilk Sans Free';
-    src: url('../../../fonts/Fonts/Sweet\ Buttermilk\ Sans\ Free.ttf');
-    font-style: normal;
-    font-weight: 400;
-}
-
 body,
 html {
     overflow-x: hidden;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -248,7 +241,7 @@ svg {
 /* line 172, ../compass/sass/style.scss */
 
 .slide:nth-child(2) .slide__overlay-path {
-    fill: #ffa31a;
+    fill: #922d2c;
 }
 
 @media (max-width: 991px) {
@@ -353,7 +346,7 @@ svg {
 /* line 231, ../compass/sass/style.scss */
 
 .slide__overlay path {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 
