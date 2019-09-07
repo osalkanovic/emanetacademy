@@ -100,7 +100,9 @@
     <section id="imgBanner">
         <div class="typewriter" id='myDIV'>
             <h2>Galerija</h2>
-            <h2>Nasi najljepsi trenuci</h2>
+        </div>
+        <div class='typerwriter' id='my2DIV'>
+            <h2>Naši najljepši trenuci</h2>
         </div>
 
     </section>
@@ -240,6 +242,16 @@
 
         }, 3000);
     </script>
+
+    <script>
+        setInterval(function() {
+            var element = document.getElementsById("my2DIV");
+            element.classList.remove("bezveze");
+            element.classList.add('typerwriter');
+
+        }, 4000);
+    </script>
+
 
 </body>
 
