@@ -39,17 +39,10 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 /*--------------------*/
 
-@font-face {
-    font-family: 'Sweet Buttermilk Sans Free';
-    src: url('./fonts/Fonts/Sweet\ Buttermilk\ Sans\ Free.ttf');
-    font-style: normal;
-    font-weight: 400;
-}
-
 body,
 html {
     overflow-x: hidden;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -1174,6 +1167,7 @@ div[data-dimension] {
 .logodiv {
     display: flex;
     margin-top: 15px;
+    margin-left: -80px;
 }
 
 .logotxt {
