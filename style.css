@@ -1246,7 +1246,7 @@ div[data-dimension] {
 }
 
 #imgBanner {
-    background-image: url("img/galleryback.png");
+    background-image: url("img/galeryBacground.PNG");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: inline;
