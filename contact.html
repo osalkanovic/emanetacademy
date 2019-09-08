@@ -123,10 +123,19 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8">
                     <div class="contact_form wow fadeInLeft">
+
+                        <form class="submitphoto_form" action="" method="POST">
+                            <input type="text" name="first_name" class="wp-form-control wpcf7-text" placeholder="Vase ime">
+                            <input type="text" name="last_name" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
+                            <input type="text" name="email" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                            <input type="text" name="message" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+
+                             <input type="submit" name="submit" value="Posalji" class="wpcf7-submit">
                         <form name='myForm' onsubmit="return validateForm()" method="post" class="submitphoto_form">
                             <input type="text" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime" name="fname" required>
                             <input type="mail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
                             <input type="submit" value="Posalji" class="wpcf7-submit">
+
                         </form>
                     </div>
                 </div>
