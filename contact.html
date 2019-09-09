@@ -123,10 +123,14 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8">
                     <div class="contact_form wow fadeInLeft">
-                        <form class="submitphoto_form">
-                            <input type="text" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
-                            <input type="mail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
-                            <input type="submit" value="Posalji" class="wpcf7-submit">
+
+                        <form  class="submitphoto_form">
+                            <input type="text" name="first_name" class="wp-form-control wpcf7-text" placeholder="Vase ime">
+                            <input type="text" name="last_name" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
+                            <input type="text" name="email" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                            <input type="text" name="message" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                             <input type="submit" name="submit" value="Posalji" class="wpcf7-submit">
+                 
                         </form>
                     </div>
                 </div>
@@ -214,6 +218,14 @@
     <script src="js/queryloader2.min.js" type="text/javascript"></script>
     <!-- For smooth animatin  -->
     <script src="js/wow.min.js"></script>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                return false;
+            }
+        }
+    </script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
     <!-- slick slider -->
@@ -230,9 +242,40 @@
     <!-- Custom js-->
     <script src="js/custom.js"></script>
     <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-  ====================================================-->
+    -->
+    <script type="module">
+        console.log("usao");
+    var mandrill = require('./node_modules/node-mandrill')('580a07388ebd9903369fc61662fe5332-us4'); 
+
+function sendEmail ( _name, _email, _subject, _message) {
+    mandrill('/messages/send', {
+        message: {
+            to: [{email: _email , name: _name}],
+            from_email: 'osalkanovic5@gmail.com',
+            subject: _subject,
+            text: _message
+        }
+    }, function(error, response){
+        if (error) console.log( error );
+        else console.log(response);
+    });
+}
+
+// define your own email api which points to your server.
+
+app.post( '/api/sendemail/', function(req, res){
+
+    var _name = req.body.name;
+    var _email = req.body.email;
+    var _subject = req.body.subject;
+    var _messsage = req.body.message;
+
+    //implement your spam protection or checks. 
+
+    sendEmail ( _name, _email, _subject, _message );
+
+});
+    </script>
 
 </body>
 

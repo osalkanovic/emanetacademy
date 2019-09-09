@@ -1,13 +1,4 @@
-/*
-Template Name: WpF Degree
-Author: WpFreeware
-Author URI: http://wpfreeware.com/
-Description: Ultra Responsive Bootstrap Educational Html5 Template.
-Version: 1.0
-Tags: light, white,Multi page,Education,School, University,custom-colors,Bootstrap,responsive, html5, css3
-License: GPL V3 or later
-License URI: http://www.gnu.org/licenses/gpl.html
-*/
+
 
 
 /* Table of Content
@@ -1245,7 +1236,7 @@ div[data-dimension] {
 }
 
 #imgBanner {
-    background-image: url("img/galleryback.png");
+    background-image: url("img/galeryBacground.PNG");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: inline;
@@ -1516,6 +1507,7 @@ div[data-dimension] {
 }
 
 .blog_title {
+    color: #922D2C;
     display: block;
     margin-bottom: 7px;
     margin-top: 20px;
@@ -1575,6 +1567,7 @@ div[data-dimension] {
 }
 
 .blog_summary {
+    font-size: 15px;
     color: #9b9b9b;
     line-height: 18px;
     margin: 10px 5px 10px 0;
@@ -2643,7 +2636,7 @@ div[data-dimension] {
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
     /* Adjust as needed */
-    animation: typing 2s steps(40) infinite, blink-caret .25s step-end infinite;
+    animation: typing1 2s steps(40) infinite, blink-caret .25s step-end infinite;
     width: 100px;
 }
 
@@ -2673,6 +2666,73 @@ div[data-dimension] {
     }
     to {
         width: 450px;
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: white;
+    }
+}
+.typewriter1 {
+    color: white;
+    font-size: 45px;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing1 2s steps(40) infinite, blink-caret .25s step-end infinite;
+    width: 100px;
+}
+
+.typerwriter1 {
+    color: white;
+    font-size: 45px;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing2 5s steps(40) infinite, blink-caret .25s step-end infinite;
+    width: 470px;
+}
+
+
+/* The typing effect */
+
+@keyframes typing1 {
+    from {
+        width: 0
+    }
+    to {
+        width: 210px;
+    }
+}
+
+@keyframes typing2 {
+    from {
+        width: 0
+    }
+    to {
+        width: 600px;
     }
 }
 
