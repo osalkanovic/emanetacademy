@@ -529,11 +529,15 @@ img {
 }
 
 .title_two {
+    color: #922D2C;
     padding-bottom: 0;
     position: relative;
     text-align: center;
     font-size: 70px;
     color: #922D2C;
+}
+.title_area p{
+    color: black;
 }
 
 .whyus_icon {
@@ -1129,7 +1133,7 @@ div[data-dimension] {
     float: left;
     display: inline;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #922D2C;
     padding: 20px 0px;
 }
 
@@ -1142,6 +1146,7 @@ div[data-dimension] {
 .footer_bootomLeft>p,
 .footer_bootomRight>p {
     margin-bottom: 0px;
+    color: white;
 }
 
 .footer_bootomRight {
@@ -1396,7 +1401,7 @@ div[data-dimension] {
     -webkit-transition: all 0.5s ease 0s;
     -ms-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; f
 }
 
 .singlecourse_author:hover {
@@ -1957,6 +1962,7 @@ div[data-dimension] {
 
 .contact_address>h3 {
     margin-top: 0px;
+    color: #922D2C;
 }
 
 .address_group {
@@ -1964,6 +1970,9 @@ div[data-dimension] {
     display: inline;
     width: 100%;
     margin-bottom: 30px;
+}
+.address_group span{
+    color: #922D2C;
 }
 
 .address_group .footer_social li a {
@@ -2335,6 +2344,19 @@ div[data-dimension] {
     .slider_right_caption {
         top: 15%;
     }
+    .typerwriter1 {
+        width: 100%;
+    }
+    .typerwriter {
+        width: 80px;
+    }
+    .typerwriter1 h2 {
+        font-size: 10px;
+        width: 100px;
+    }
+    .typerwriter h2 {
+        font-size: 10px;
+    }
     .slider_caption h2 {
         font-size: 20px;
         line-height: 30px;
@@ -2385,7 +2407,7 @@ div[data-dimension] {
     .feed_tabs li a {
         font-size: 14px;
     }
-    #imgBanner h2 {
+    .typewriter1 h2 {
         font-size: 30px;
     }
     .blog_title {
@@ -2397,6 +2419,9 @@ div[data-dimension] {
         margin-right: 0;
         margin-left: 0;
         height: 200px;
+    }
+    .typerwriter1 {
+        width: 100%;
     }
 }
 
@@ -2763,4 +2788,32 @@ div[data-dimension] {
 .sefika {
     width: 20px;
     height: 20px;
+
+@media only screen and (max-width: 768px) {
+    .logodiv {
+        position: absolute;
+        left: 5px;
+    }
+    .slide__bg {
+        background-position: center;
+        max-width: 100%;
+    }
+    .slider {
+        height: 550px;
+        max-width: 100%;
+    }
+    #slider {
+        height: 550px;
+    }
+    .slide__text-heading {
+        line-height: 20rem;
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .logodiv {
+        position: absolute;
+        left: 50px;
+    }
 }

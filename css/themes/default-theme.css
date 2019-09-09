@@ -28,7 +28,7 @@ Author URI : http://www.wpfreeware.com/
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #78ADC9;
+    background-color: #922D2C;
 }
 
 .navbar-default .navbar-nav>.open>a,
@@ -139,8 +139,8 @@ Author URI : http://www.wpfreeware.com/
     background-color: #78ADC9;
 }
 
-.footer_bootomLeft a {
-    color: #78ADC9;
+.footer_bootomLeft p {
+    color: white;
 }
 
 .pagination li a {
