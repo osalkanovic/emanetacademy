@@ -1,15 +1,3 @@
-/*
-Template Name: WpF Degree
-Author: WpFreeware
-Author URI: http://wpfreeware.com/
-Description: Ultra Responsive Bootstrap Educational Html5 Template.
-Version: 1.0
-Tags: light, white,Multi page,Education,School, University,custom-colors,Bootstrap,responsive, html5, css3
-License: GPL V3 or later
-License URI: http://www.gnu.org/licenses/gpl.html
-*/
-
-
 /* Table of Content
 ==================================================
 	#BASIC TYPOGRAPHY
@@ -227,7 +215,7 @@ img {
 }
 
 .navbar-default {
-    background-color: transparent;
+    background-color: white;
     border-bottom: 1.5px solid #922D2C;
 }
 
@@ -1167,7 +1155,6 @@ div[data-dimension] {
 .logodiv {
     display: flex;
     margin-top: 15px;
-    margin-left: -80px;
 }
 
 .logotxt {
@@ -2691,6 +2678,7 @@ div[data-dimension] {
         border-color: white;
     }
 }
+
 .typewriter1 {
     color: white;
     font-size: 45px;
