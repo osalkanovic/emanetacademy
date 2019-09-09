@@ -31,7 +31,8 @@
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet">
     <!-- Circle counter cdn css file -->
-    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
+    <link rel='stylesheet prefetch'
+        href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
     <!-- smooth animate css file -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- preloader -->
@@ -46,7 +47,7 @@
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -71,16 +72,18 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <!-- LOGO -->
                         <!-- TEXT BASED LOGO -->
                         <div class="logodiv">
-                            <img class="logo" src="img/logo (1).png" alt="logo"><img class="logotxt" src='img/logotxt.png' />
+                            <img class="logo" src="img/logo (1).png" alt="logo"><img class="logotxt"
+                                src='img/logotxt.png' />
                         </div>
                         <!-- IMG BASED LOGO  -->
                         <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->
@@ -127,15 +130,17 @@
                     <div class="contact_form wow fadeInLeft">
 
 
-                        <form action="#" id="form" method="post" name="form" class="submitphoto_form">
+                        <form id="halo" class="submitphoto_form">
                             <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime">
                             <input type="text" name="sub" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
-                            <input type="text" name="vemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
-                            <input type="text" name="msg" class="wp-form-control wpcf7-email" placeholder="Email adresa">
-                             <input type="submit" name="submit" value="Posalji" class="wpcf7-submit">
-                 
+                            <input type="text" name="vemail" class="wp-form-control wpcf7-email"
+                                placeholder="Email adresa">
+                            <input type="text" name="msg" class="wp-form-control wpcf7-email"
+                                placeholder="Email adresa">
+                            <input id='halo' type="submit" name="submit" value="Posalji" class="wpcf7-submit">
 
-                      
+
+
                     </div>
                 </div>
                 <div class="container">
@@ -168,11 +173,21 @@
                                 </div>
                                 <div class="address_group">
                                     <ul class="footer_social">
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Google+"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
+                                                data-toggle="tooltip" data-original-title="Facebook"><i
+                                                    class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
+                                                data-toggle="tooltip" data-original-title="Twitter"><i
+                                                    class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
+                                                data-toggle="tooltip" data-original-title="Google+"><i
+                                                    class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
+                                                data-toggle="tooltip" data-original-title="Linkedin"><i
+                                                    class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
+                                                data-toggle="tooltip" data-original-title="Youtube"><i
+                                                    class="fa fa-youtube"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -247,7 +262,33 @@
     <script src="js/custom.js"></script>
     <!--=============================================== 
     -->
-    
+
+    <script type="text/javascript" language="JavaScript">
+        $('#halo').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+                    data: {
+                key: '717c87f2027b74e1cdf73308a20810fe-us4',
+                message: {
+                from_email: 'banjicedis@gmail.com',
+            to: [
+                {
+                    email: 'osalkanovic5@gmail.com',
+            name: 'makaron',
+            type: 'to'
+        },
+        ],
+        subject: 'suckaj mi kitu',
+        html: 'de dvista'
+    }
+  }
+ }).done(function (response) {
+            console.log(response); // if you're into that sorta thing
+        });
+});
+    </script>
+
 
 </body>
 
