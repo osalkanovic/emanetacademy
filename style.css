@@ -1167,7 +1167,6 @@ div[data-dimension] {
 .logodiv {
     display: flex;
     margin-top: 15px;
-    margin-left: -80px;
 }
 
 .logotxt {
