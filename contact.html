@@ -136,7 +136,7 @@
                             <input type="text" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
                             <textarea type="text" name="msg" class="wp-form-control wpcf7-email"
-                                placeholder="Email adresa"></textarea>
+                                placeholder="O vama"></textarea>
                             <input id='js_send' type="submit" name="submit" value="Posalji" class="wpcf7-submit">
 
 
@@ -296,8 +296,8 @@
                         js_onError(request.response);
                     }
                 };
-                var email = document.querySelector("#" + form_id_js + "[name='vemail']").value;
-                var lastname = document.querySelector("#" + form_id_js + "[name='vlatname']").value;
+                var email = document.querySelector("#" + form_id_js + " [name='vemail']").value;
+                var lastname = document.querySelector("#" + form_id_js + " [name='vlastname']").value;
                 var name = document.querySelector("#" + form_id_js + " [name='vname']").value;
                 var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
                 var emailSubj = "Email: ";
