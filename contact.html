@@ -265,28 +265,21 @@
 
     <script type="text/javascript" language="JavaScript">
         $('#halo').click(function () {
-            $.ajax({
-                type: 'POST',
-                url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-                    data: {
-                key: '717c87f2027b74e1cdf73308a20810fe-us4',
-                message: {
-                from_email: 'banjicedis@gmail.com',
-            to: [
-                {
-                    email: 'osalkanovic5@gmail.com',
-            name: 'makaron',
-            type: 'to'
-        },
-        ],
-        subject: 'suckaj mi kitu',
-        html: 'de dvista'
-    }
-  }
- }).done(function (response) {
-            console.log('response',response); // if you're into that sorta thing
-        });
-});
+           
+var m = new mandrill.Mandrill('717c87f2027b74e1cdf73308a20810fe-us4'); // This will be public
+
+function sendTheMail(){
+    m.messages.send({
+        "message": {
+            "from_email": "osalkanovic5@gmail.com",
+            "from_name": "omer",
+            "to":[{"email": "banjicedis@gmail.com", "name": "someone's_name"}], // Array of recipients
+            "subject": "optional_subject_line",
+            "text": "Text to be sent in the body" // Alternatively, use the "html" key to send HTML emails rather than plaintext
+        }
+    });
+}
+        }
     </script>
 
 
