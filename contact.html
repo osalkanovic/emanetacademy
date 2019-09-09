@@ -135,7 +135,7 @@
                             <input type="text" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
                             <input type="text" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
-                            <input type="text" name="msg" class="wp-form-control wpcf7-email"
+                            <textarea type="text" name="msg" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
                             <input id='js_send' type="submit" name="submit" value="Posalji" class="wpcf7-submit">
 
@@ -296,10 +296,16 @@
                         js_onError(request.response);
                     }
                 };
-                var subject = document.querySelector("#" + form_id_js + " [name='vname']").value;
+                var email = document.querySelector("#" + form_id_js + "[name='vemail']").value;
+                var lastname = document.querySelector("#" + form_id_js + "[name='vlatname']").value;
+                var name = document.querySelector("#" + form_id_js + " [name='vname']").value;
                 var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
-                data_js['subject'] = subject;
-                data_js['text'] = message;
+                var emailSubj = "Email: ";
+                var aboutMe = "O meni: ";
+                var nameSubk = "Ime ";
+                var text = emailSubj.concat(email,nameSubk, name, lastname, aboutMe, message);
+                data_js['subject'] = "Prijava za Emanet IT Academy";
+                data_js['text'] = text;
                 var params = toParams(data_js);
         
                 request.open("POST", "https://postmail.invotes.com/send", true);
