@@ -131,8 +131,8 @@
 
 
                         <form id="prijava" class="submitphoto_form">
-                            <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime">
-                            <input type="text" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
+                            <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
+                            <input type="text" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Broj telefona">
                             <input type="text" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
                             <textarea type="text" name="msg" class="wp-form-control wpcf7-email"
@@ -297,13 +297,14 @@
                     }
                 };
                 var email = document.querySelector("#" + form_id_js + " [name='vemail']").value;
-                var lastname = document.querySelector("#" + form_id_js + " [name='vlastname']").value;
+                var number = document.querySelector("#" + form_id_js + " [name='vlastname']").value;
                 var name = document.querySelector("#" + form_id_js + " [name='vname']").value;
                 var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
-                var emailSubj = "Email: ";
-                var aboutMe = "O meni: ";
-                var nameSubk = "Ime ";
-                var text = emailSubj.concat(email,nameSubk, name, lastname, aboutMe, message);
+                var emailSubj = " Email: ";
+                var aboutMe = " O meni: ";
+                var nameSubj = " Ime ";
+                var numberSubj = " Broj telefona: "
+                var text = emailSubj.concat(email,nameSubj, name, numberSubj, aboutMe, message);
                 data_js['subject'] = "Prijava za Emanet IT Academy";
                 data_js['text'] = text;
                 var params = toParams(data_js);
