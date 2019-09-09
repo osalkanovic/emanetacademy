@@ -1133,7 +1133,7 @@ div[data-dimension] {
     float: left;
     display: inline;
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #922D2C;
     padding: 20px 0px;
 }
 
@@ -1146,6 +1146,7 @@ div[data-dimension] {
 .footer_bootomLeft>p,
 .footer_bootomRight>p {
     margin-bottom: 0px;
+    color: white;
 }
 
 .footer_bootomRight {
@@ -2346,8 +2347,12 @@ div[data-dimension] {
     .typerwriter1 {
         width: 100%;
     }
+    .typerwriter {
+        width: 80px;
+    }
     .typerwriter1 h2 {
         font-size: 10px;
+        width: 100px;
     }
     .typerwriter h2 {
         font-size: 10px;
