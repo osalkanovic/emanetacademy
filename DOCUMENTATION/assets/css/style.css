@@ -11,7 +11,9 @@
 body,
 html {
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Rokkitt', serif;
 }
 
 
@@ -386,11 +388,23 @@ svg {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 991px) {
-    /* line 255, ../compass/sass/style.scss */
+@media only screen and (max-width: 768px) {
     .slide__text-heading {
         line-height: 20rem;
-        font-size: 3.5rem;
+        font-size: 20px;
+    }
+    .slide__text-desc {
+        font-size: 15px;
+    }
+    .slide__text {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        transform: translateY(50%);
+        transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+        padding: 0 1rem;
     }
 }
 
@@ -453,4 +467,11 @@ svg {
 
 .slide__text-link:hover:before {
     transform: rotateX(0);
+}
+
+.footer {
+    height: 300px;
+    background-image: linear-gradient( to left, #922D2C 10%, #dbd7d7);
+    color: white;
+    border-radius: -100px;
 }
