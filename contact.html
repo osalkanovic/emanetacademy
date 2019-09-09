@@ -130,14 +130,14 @@
                     <div class="contact_form wow fadeInLeft">
 
 
-                        <form id="halo" class="submitphoto_form">
+                        <form id="prijava" class="submitphoto_form">
                             <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime">
-                            <input type="text" name="sub" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
+                            <input type="text" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
                             <input type="text" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
                             <input type="text" name="msg" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
-                            <input id='halo' type="submit" name="submit" value="Posalji" class="wpcf7-submit">
+                            <input id='js_send' type="submit" name="submit" value="Posalji" class="wpcf7-submit">
 
 
 
@@ -263,24 +263,71 @@
     <!--=============================================== 
     -->
 
-    <script type="text/javascript" language="JavaScript">
-        $('#halo').click(function () {
-           
-var m = new mandrill.Mandrill('717c87f2027b74e1cdf73308a20810fe-us4'); // This will be public
+    <script>
 
-function sendTheMail(){
-    m.messages.send({
-        "message": {
-            "from_email": "osalkanovic5@gmail.com",
-            "from_name": "omer",
-            "to":[{"email": "banjicedis@gmail.com", "name": "someone's_name"}], // Array of recipients
-            "subject": "optional_subject_line",
-            "text": "Text to be sent in the body" // Alternatively, use the "html" key to send HTML emails rather than plaintext
-        }
-    });
-}
-        }
-    </script>
+            //update this with your js_form selector
+            var form_id_js = "prijava";
+        
+            var data_js = {
+                "access_token": "2p1jfkeognx0pyk17di8ogb3"
+            };
+        
+            function js_onSuccess() {
+                // remove this to avoid redirect
+                window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+            }
+        
+            function js_onError(error) {
+                // remove this to avoid redirect
+                window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+            }
+        
+            var sendButton = document.getElementById("js_send");
+        
+            function js_send() {
+                sendButton.value='Sending…';
+                sendButton.disabled=true;
+                var request = new XMLHttpRequest();
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4 && request.status == 200) {
+                        js_onSuccess();
+                    } else
+                    if(request.readyState == 4) {
+                        js_onError(request.response);
+                    }
+                };
+                var email = document.querySelector("#" + form_id_js + "[name='vmail']").value;
+                var subject = document.querySelector("#" + form_id_js + " [name='vsub']").value;
+                var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
+                var text = email + message;
+                data_js['subject'] = subject;
+                data_js['text'] = text;
+                var params = toParams(data_js);
+        
+                request.open("POST", "https://postmail.invotes.com/send", true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        
+                request.send(params);
+        
+                return false;
+            }
+        
+            sendButton.onclick = js_send;
+        
+            function toParams(data_js) {
+                var form_data = [];
+                for ( var key in data_js ) {
+                    form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+                }
+        
+                return form_data.join("&");
+            }
+        
+            var js_form = document.getElementById(form_id_js);
+            js_form.addEventListener("submit", function (e) {
+                e.preventDefault();
+            });
+        </script>
 
 
 </body>
