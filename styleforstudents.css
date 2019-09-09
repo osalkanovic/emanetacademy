@@ -1,8 +1,8 @@
-.testimonial{
+.testimonial {
     text-align: center;
 }
 
-.testimonial .pic{
+.testimonial .pic {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -10,13 +10,13 @@
     margin-bottom: 15px;
 }
 
-.testimonial .pic img{
+.testimonial .pic img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
 
-.testimonial .testimonial-title{
+.testimonial .testimonial-title {
     display: inline-block;
     font-size: 22px;
     font-weight: 600;
@@ -24,28 +24,30 @@
     margin: 0 0 70px 0;
 }
 
-.testimonial .testimonial-title small{
-    font-size: 15px;
+.testimonial .testimonial-title small {
+    font-size: 16px;
     font-weight: 600;
     color: #787878;
 }
 
-.testimonial .description{
-    font-size: 14px;
+.testimonial .description {
+    font-size: 17px;
     color: #787878;
-    line-height: 27px;
+    line-height: 1.2em;
     position: relative;
     margin: 0;
+    font-family: 'Inconsolata', monospace;
 }
-.demo
-{
-	padding: 100px 0;
+
+.demo {
+    padding: 100px 0;
 }
-.heading-title
-{
-	margin-bottom: 100px;
+
+.heading-title {
+    margin-bottom: 100px;
 }
-.testimonial .description:before{
+
+.testimonial .description:before {
     content: "\f10d";
     font-family: fontawesome;
     width: 35px;
@@ -56,18 +58,17 @@
     left: 46%;
     font-size: 20px;
     color: #932D2B;
-    line-height:33px;
+    line-height: 33px;
     border: 2px solid #932D2B;
 }
 
-.owl-theme .owl-controls .owl-page span{
+.owl-theme .owl-controls .owl-page span {
     background: #fff;
     border: 2px solid #932D2B;
     opacity: 1;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
-.owl-theme .owl-controls .owl-page:hover span{
+.owl-theme .owl-controls .owl-page:hover span {
     border: 2px solid #932D2B;
 }
-
