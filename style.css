@@ -2766,3 +2766,32 @@ div[data-dimension] {
         border-color: white;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .logodiv {
+        position: absolute;
+        left: 5px;
+    }
+    .slide__bg {
+        background-position: center;
+        max-width: 100%;
+    }
+    .slider {
+        height: 550px;
+        max-width: 100%;
+    }
+    #slider {
+        height: 550px;
+    }
+    .slide__text-heading {
+        line-height: 20rem;
+        font-size: .5rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .logodiv {
+        position: absolute;
+        left: 50px;
+    }
+}
