@@ -520,10 +520,14 @@ img {
 }
 
 .title_two {
+    color: #922D2C;
     padding-bottom: 0;
     position: relative;
     text-align: center;
     text-transform: uppercase;
+}
+.title_area p{
+    color: black;
 }
 
 .whyus_icon {
@@ -1383,7 +1387,7 @@ div[data-dimension] {
     -webkit-transition: all 0.5s ease 0s;
     -ms-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s; f
 }
 
 .singlecourse_author:hover {
@@ -1944,6 +1948,7 @@ div[data-dimension] {
 
 .contact_address>h3 {
     margin-top: 0px;
+    color: #922D2C;
 }
 
 .address_group {
@@ -1951,6 +1956,9 @@ div[data-dimension] {
     display: inline;
     width: 100%;
     margin-bottom: 30px;
+}
+.address_group span{
+    color: #922D2C;
 }
 
 .address_group .footer_social li a {
