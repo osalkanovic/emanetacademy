@@ -88,10 +88,10 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                            <li><a href="index.html">Pocetna</a></li>
-                            <li><a href="events-archive.html">Dogadjaji</a></li>
+                            <li><a href="index.html">Početna</a></li>
+                            <li><a href="events-archive.html">Događaji</a></li>
                             <li><a href="gallery.html">Galerija</a></li>
-                            <li class="active"><a href="contact.html">O nama</a></li>
+                            <li class="active"><a href="contact.html">Kontakt</a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
@@ -105,8 +105,8 @@
     <!--=========== BEGIN COURSE BANNER SECTION ================-->
     <section id="imgBanner">
         <div class="typewriter1 f">
-        <h2>Kontakt</h2>
-    </div>
+            <h2>Kontakt</h2>
+        </div>
     </section>
     <!--=========== END COURSE BANNER SECTION ================-->
 
@@ -126,6 +126,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8">
                     <div class="contact_form wow fadeInLeft">
 
+
                         <form action="#" id="form" method="post" name="form" class="submitphoto_form">
                             <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime">
                             <input type="text" name="sub" class="wp-form-control wpcf7-text" placeholder="Vase prezime">
@@ -133,7 +134,8 @@
                             <input type="text" name="msg" class="wp-form-control wpcf7-email" placeholder="Email adresa">
                              <input type="submit" name="submit" value="Posalji" class="wpcf7-submit">
                  
-                        </form>
+
+                      
                     </div>
                 </div>
                 <div class="container">
@@ -245,7 +247,15 @@
     <script src="js/custom.js"></script>
     <!--=============================================== 
     -->
+<<<<<<< HEAD
     
+=======
+    <script type="module">
+        console.log("usao"); var mandrill = require('node-mandrill')('580a07388ebd9903369fc61662fe5332-us4'); function sendEmail ( _name, _email, _subject, _message) { mandrill('/messages/send', { message: { to: [{email: _email , name: _name}], from_email: 'osalkanovic5@gmail.com',
+        subject: _subject, text: _message } }, function(error, response){ if (error) console.log( error ); else console.log(response); }); } // define your own email api which points to your server. app.post( '/api/sendemail/', function(req, res){ var
+        _name = req.body.name; var _email = req.body.email; var _subject = req.body.subject; var _messsage = req.body.message; //implement your spam protection or checks. sendEmail ( _name, _email, _subject, _message ); });
+    </script>
+>>>>>>> 04bf5c6b2ee40872011b84385c03634d1903d354
 
 </body>
 
