@@ -663,6 +663,29 @@
     }
     
     .container12 {
+        float: left;
+    }
+}
+.wrapper12 {
+ width:400px;
+ height:400px;
+ transform-style: preserve-3d;
+ transition: transform 1s;
+}
+
+.hehe { /* image is 460px x 460px */
+ width:400px;
+ height:10px; /* 50 divisions */
+ background-image: url('img/logo2.png');
+ background-size: cover;
+ backface-visibility: visible;
+ animation: turner 20s infinite;
+}
+@media all and (max-width: 767px) {
+    .wrapper12{
+        margin-left: 30px;
+    }
+
         position: relative;
         perspective: 800px;
         width: 50%;
@@ -681,8 +704,7 @@
         transform-style: preserve-3d;
         transition: transform 1s;
     }
-    
-    .hehe {
+        .hehe {
         /* image is 460px x 460px */
         width: 400px;
         height: 10px;
