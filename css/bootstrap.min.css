@@ -179,7 +179,7 @@ input[type=radio] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0
+    padding: 0body
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -1369,7 +1369,7 @@ html {
 }
 
 body {
-    line-height: 1.42857143;
+    /* line-height: 1.42857143; */
     color: #333;
     background-color: #fff
 }
