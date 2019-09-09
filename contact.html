@@ -301,7 +301,7 @@
                 var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
                 var text = email + message;
                 data_js['subject'] = subject;
-                data_js['text'] = text;
+                data_js['text'] = message;
                 var params = toParams(data_js);
         
                 request.open("POST", "https://postmail.invotes.com/send", true);
