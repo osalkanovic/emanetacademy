@@ -2322,6 +2322,15 @@ div[data-dimension] {
     .slider_right_caption {
         top: 15%;
     }
+    .typerwriter1 {
+        width: 100%;
+    }
+    .typerwriter1 h2 {
+        font-size: 10px;
+    }
+    .typerwriter h2 {
+        font-size: 10px;
+    }
     .slider_caption h2 {
         font-size: 20px;
         line-height: 30px;
@@ -2372,7 +2381,7 @@ div[data-dimension] {
     .feed_tabs li a {
         font-size: 14px;
     }
-    #imgBanner h2 {
+    .typewriter1 h2 {
         font-size: 30px;
     }
     .blog_title {
@@ -2384,6 +2393,9 @@ div[data-dimension] {
         margin-right: 0;
         margin-left: 0;
         height: 200px;
+    }
+    .typerwriter1 {
+        width: 100%;
     }
 }
 
