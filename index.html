@@ -553,6 +553,7 @@
         <script>
             window.addEventListener("scroll", function(event) {
                 var scroll = this.scrollY;
+                if(screen.width > 768){
                 if(scroll >= 308 && scroll <= 987){
                     console.log("usao u scroll uslov");
                     var element = document.getElementById("oNama");
@@ -571,7 +572,7 @@
                     var element = document.getElementById("zasto");
                     element.classList.remove("tracking-in-expand");
                 }
-                if(scroll >= 1793 && scroll <= 2366){
+                if(scroll >= 1486 && scroll <= 2150){
                     console.log("usao u scroll uslov");
                     var element = document.getElementById("studenti");
                     element.classList.add("tracking-in-expand");
@@ -580,6 +581,35 @@
                     var element = document.getElementById("studenti");
                     element.classList.remove("tracking-in-expand");
                 }
+            }else if (screen.width <= 768 && screen.width > 425){
+                if(scroll >= 140 && scroll <= 704){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1107 && scroll <= 1674){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 2695 && scroll <= 3350){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }
                 console.log('scroll', scroll);
 
 
