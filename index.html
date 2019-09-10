@@ -164,7 +164,7 @@
                 <!-- Start about us area -->
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="aboutus_area wow fadeInLeft">
-                        <h2 class="titile">O nama</h2>
+                        <h2 class="titile" id="oNama">O nama</h2>
                         <p>Vodeći problem Bosne i Hercegovine je nezaposlenost. Velika većina ljudi ili nije zaposlena ili rade poslove koji su slabo placeni, a taj problem se najviše javlja u povratničkim mjestima Bosne i Hercegovine. Kako bi pomogli tim
                             mjestima odlučili smo da pokrenemo IT Akademiju koja Vam nudi besplatan kurs, te i besplatno učenje stranih jezika. Nakon šestomjesečne obuke, dobijate zaposljenje za rad od kuće.</p>
                     </div>
@@ -239,7 +239,7 @@
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="title_area">
-                                    <h2 class="title_two">Zašto baš mi</h2>
+                                    <h2 class="title_two" id="zasto">Zašto baš mi</h2>
                                     <span></span>
                                 </div>
                             </div>
@@ -296,7 +296,7 @@
             <div class="container">
                 <div class="col-lg-12 col-md-12">
                     <div class="title_area">
-                        <h2 class="title_two">Šta kažu naši studenti</h2>
+                        <h2 class="title_two" id="studenti">Šta kažu naši studenti</h2>
                         <span></span>
                     </div>
                 </div>
@@ -553,6 +553,63 @@
         <script>
             window.addEventListener("scroll", function(event) {
                 var scroll = this.scrollY;
+                if(screen.width > 768){
+                if(scroll >= 308 && scroll <= 987){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 830 && scroll <= 1472){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1486 && scroll <= 2150){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }else if (screen.width <= 768 && screen.width > 425){
+                if(scroll >= 140 && scroll <= 704){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1107 && scroll <= 1674){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 2695 && scroll <= 3350){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }
                 console.log('scroll', scroll);
 
 
@@ -665,7 +722,7 @@
     .container12 {
         float: left;
     }
-}
+
 .wrapper12 {
  width:400px;
  height:400px;
@@ -686,10 +743,7 @@
         margin-left: 30px;
     }
 
-        position: relative;
-        perspective: 800px;
-        width: 50%;
-        float: right;
+        
     }
     
     @media all and (max-width: 676px) {
@@ -917,3 +971,74 @@
         animation-delay: 3.7s;
     }
 </style>
+<style>
+      
+
+ @-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+    </style>
