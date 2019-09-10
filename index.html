@@ -326,7 +326,7 @@
                                     <img src="img/nevzet.PNG" alt="" />
                                 </div>
                                 <h3 class="testimonial-title">
-                                    Nevzet Šabanovski<small>, Web Developer, , Qlik developer</small>
+                                    Nevzet Šabanovski<small>, Web Developer & Qlik developer</small>
                                 </h3>
                                 <p class="description">
                                     Tokom nastave imao sam utisak kao da sam dio tima kako zbog okruženja, tako i zbog prilike da učestvujem u brojnim projektima. Nastavni plan ide u korak sa vremenom, što je najbitnije za IT oblast. Nema suhoparnog učenja teorije, već objašnjenja na praktičnim
@@ -339,7 +339,7 @@
                                     <img src="./img/sg.jpg" alt="" />
                                 </div>
                                 <h3 class="testimonial-title">
-                                    Šefika Godušević<small>, Web Developer, Qlik developer</small>
+                                    Šefika Godušević<small>, Web Developer & Qlik developer</small>
                                 </h3>
                                 <p class="description">
 
@@ -569,64 +569,110 @@
         <script>
             window.addEventListener("scroll", function(event) {
                 var scroll = this.scrollY;
-                if (screen.width > 768) {
-                    if (scroll >= 308 && scroll <= 987) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("oNama");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("oNama");
-                        element.classList.remove("tracking-in-expand");
-                    }
-                    if (scroll >= 830 && scroll <= 1472) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("zasto");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("zasto");
-                        element.classList.remove("tracking-in-expand");
-                    }
-                    if (scroll >= 1486 && scroll <= 2150) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("studenti");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("studenti");
-                        element.classList.remove("tracking-in-expand");
-                    }
-                } else if (screen.width <= 768 && screen.width > 425) {
-                    if (scroll >= 140 && scroll <= 704) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("oNama");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("oNama");
-                        element.classList.remove("tracking-in-expand");
-                    }
-                    if (scroll >= 1107 && scroll <= 1674) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("zasto");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("zasto");
-                        element.classList.remove("tracking-in-expand");
-                    }
-                    if (scroll >= 2695 && scroll <= 3350) {
-                        console.log("usao u scroll uslov");
-                        var element = document.getElementById("studenti");
-                        element.classList.add("tracking-in-expand");
-                    } else {
-                        console.log("usao else u scroll uslov");
-                        var element = document.getElementById("studenti");
-                        element.classList.remove("tracking-in-expand");
-                    }
+                if(screen.width > 768 && screen.width < 1024){
+                if(scroll >= 308 && scroll <= 987){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
                 }
+                if(scroll >= 830 && scroll <= 1472){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1486 && scroll <= 2150){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }else if (screen.width <= 768 && screen.width > 425){
+                if(scroll >= 198 && scroll <= 704){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1821 && scroll <= 2311){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 2523 && scroll <= 3021){
+                    console.log("usao u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    console.log("usao else u scroll uslov");
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }else if(screen.width > 1023 && screen.width < 1439){
+                if(scroll >= 258 && scroll <= 995){
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1206 && scroll <= 1891){
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1878 && scroll <= 2561){
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }else if(screen.width > 1439 && screen.width < 2560){
+                if(scroll >= 147 && scroll <= 947){
+                    var element = document.getElementById("oNama");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("oNama");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 970 && scroll <= 1778){
+                    var element = document.getElementById("zasto");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("zasto");
+                    element.classList.remove("tracking-in-expand");
+                }
+                if(scroll >= 1611 && scroll >= 1534){
+                    var element = document.getElementById("studenti");
+                    element.classList.add("tracking-in-expand");
+                }else{
+                    var element = document.getElementById("studenti");
+                    element.classList.remove("tracking-in-expand");
+                }
+            }
+
                 console.log('scroll', scroll);
+                console.log('screen width', screen.width);
 
 
             });
