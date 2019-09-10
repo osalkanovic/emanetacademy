@@ -11,8 +11,7 @@
     font-style: normal
 }
 
-.fa {
-    display: inline-block;
+.fa {    display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
@@ -686,7 +685,8 @@
 }
 
 .fa-twitter-square:before {
-    content: "\f081"
+    content: "\f081";
+    color: #922d2c;
 }
 
 .fa-facebook-square:before {
@@ -779,11 +779,13 @@
 }
 
 .fa-twitter:before {
-    content: "\f099"
+    content: "\f099";
+    color: #922d2c;
 }
 
 .fa-facebook:before {
-    content: "\f09a"
+    content: "\f09a";
+    color: #922d2c;
 }
 
 .fa-github:before {
@@ -962,7 +964,8 @@
 }
 
 .fa-google-plus:before {
-    content: "\f0d5"
+    content: "\f0d5";
+    color: #922d2c;
 }
 
 .fa-money:before {
@@ -1009,7 +1012,8 @@
 }
 
 .fa-linkedin:before {
-    content: "\f0e1"
+    content: "\f0e1";
+    color: #922d2c;
 }
 
 .fa-rotate-left:before,
@@ -1529,7 +1533,8 @@
 }
 
 .fa-youtube:before {
-    content: "\f167"
+    content: "\f167";
+    color: #922d2c;
 }
 
 .fa-xing:before {

@@ -132,8 +132,8 @@
 
                         <form id="prijava" class="submitphoto_form">
                             <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
-                            <input type="text" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Broj telefona">
-                            <input type="text" name="vemail" class="wp-form-control wpcf7-email"
+                            <input type="number" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Broj telefona">
+                            <input type="email" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
                             <textarea type="text" name="msg" class="wp-form-control wpcf7-email"
                                 placeholder="O vama"></textarea>
@@ -285,7 +285,7 @@
             var sendButton = document.getElementById("js_send");
         
             function js_send() {
-                sendButton.value='Sending…';
+                sendButton.value='Salje se...';
                 sendButton.disabled=true;
                 var request = new XMLHttpRequest();
                 request.onreadystatechange = function() {
