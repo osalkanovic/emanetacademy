@@ -5504,11 +5504,7 @@ div[data-dimension] {
         right: 0;
     }
 @media(max-width:320px) {}
-@media all and (max-width:425px){
-    .title_two {
-        font-size: 45px;
-    }
-}
+
 .typewriter {
     color: white;
     font-size: 45px;
