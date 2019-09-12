@@ -131,7 +131,7 @@
 
 
                         <form id="prijava" class="submitphoto_form">
-                            <input type="text" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
+                            <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
                             <input type="number" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Broj telefona">
                             <input type="email" name="vemail" class="wp-form-control wpcf7-email"
                                 placeholder="Email adresa">
@@ -295,7 +295,7 @@
                 var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
                 var emailSubj = " Email: ";
                 var aboutMe = " O meni: ";
-                var nameSubj = " Ime ";
+                var nameSubj = " Ime: ";
                 var numberSubj = " Broj telefona: "
                 var text = emailSubj.concat(email,nameSubj, name, numberSubj,number, aboutMe, message);
                 data_js['subject'] = "Prijava za Emanet IT Academy";
@@ -388,7 +388,7 @@
         }
     
         var js_form = document.getElementById(form_id_js);
-        js_form.addEventListener("submit1", function (e) {
+        js_form.addEventListener("submit", function (e) {
             e.preventDefault();
         });
     </script>
