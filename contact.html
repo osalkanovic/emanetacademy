@@ -31,8 +31,7 @@
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet">
     <!-- Circle counter cdn css file -->
-    <link rel='stylesheet prefetch'
-        href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
     <!-- smooth animate css file -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- preloader -->
@@ -73,8 +72,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -83,8 +81,7 @@
                         <!-- LOGO -->
                         <!-- TEXT BASED LOGO -->
                         <div class="logodiv">
-                            <img class="logo" src="img/logo (1).png" alt="logo"><img class="logotxt"
-                                src='img/logotxt.png' />
+                            <img class="logo" src="img/logo (1).png" alt="logo"><img class="logotxt" src='img/logotxt.png' />
                         </div>
                         <!-- IMG BASED LOGO  -->
                         <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->
@@ -119,7 +116,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                       
+
                     <div class="title_area">
                         <h2 class="title_two">Prijavi se</h2>
                         <span></span>
@@ -133,12 +130,10 @@
 
 
                         <form id="prijava" class="submitphoto_form">
-                            <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vase ime i prezime">
+                            <input type="text" name="vname" class="wp-form-control wpcf7-text" placeholder="Vaše ime i prezime">
                             <input type="number" name="vlastname" class="wp-form-control wpcf7-text" placeholder="Broj telefona">
-                            <input type="email" name="vemail" class="wp-form-control wpcf7-email"
-                                placeholder="Email adresa">
-                            <textarea type="text" name="msg" class="wp-form-control wpcf7-email"
-                                placeholder="O vama"></textarea>
+                            <input type="email" name="vemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                            <textarea type="text" name="msg" class="wp-form-control wpcf7-email" placeholder="O vama"></textarea>
                             <input id='js_send' type="submit" name="submit" value="Pošalji" class="wpcf7-submit">
 
 
@@ -149,9 +144,9 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="title_area">
-                                <h2 class="title_two">Predlozi grad</h2>
+                                <h2 class="title_two">Predloži grad</h2>
                                 <span></span>
-                                <p>Ako želis da se Emanet IT Academy otvori u Vašem gradu, popunite formu</p>
+                                <p>Ako želiš da se Emanet IT Academy otvori u Vašem gradu, popunite formu</p>
                             </div>
                         </div>
                     </div>
@@ -159,8 +154,8 @@
                         <div class="col-lg-8 col-md-8 col-sm-8">
                             <div class="contact_form wow fadeInLeft">
                                 <form id="prijavagrada" class="submitphoto_form">
-                                    <input  type="text" name="vsgrad" class="wp-form-control wpcf7-text" placeholder="Grad">
-                                    <input  type="email" name="vsemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                                    <input type="text" name="vsgrad" class="wp-form-control wpcf7-text" placeholder="Grad">
+                                    <input type="email" name="vsemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
                                     <input id="js_sender" type="submit" name="ssubmit" value="Pošalji" class="wpcf7-submit">
                                 </form>
                             </div>
@@ -170,19 +165,17 @@
                                 <h3>Adresa</h3>
                                 <div class="address_group">
                                     <p><span>Adresa: </span> Bijeljinska, 151, Janja, BA</p>
-            
+
                                     <p><span>Email: </span>info@emanetit.ba</p>
-                             
+
                                 </div>
                                 <div class="address_group">
                                     <ul class="footer_social">
-                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top"
-                                                data-toggle="tooltip" data-original-title="Facebook"><i
+                                        <li><a href="#" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Facebook"><i
                                                     class="fa fa-facebook"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/company/emanet-it-academy/" class="soc_tooltip" title="" data-placement="top"
-                                                data-toggle="tooltip" data-original-title="Linkedin"><i
+                                        <li><a href="https://www.linkedin.com/company/emanet-it-academy/" class="soc_tooltip" title="" data-placement="top" data-toggle="tooltip" data-original-title="Linkedin"><i
                                                     class="fa fa-linkedin"></i></a></li>
-                                        
+
                                     </ul>
                                 </div>
                             </div>
@@ -259,105 +252,103 @@
     -->
 
     <script>
-
-            //update this with your js_form selector
-            var form_id_js = "prijava";
-        
-            var data_js = {
-                "access_token": "cz6sormi6dcya5x3bhhof9op"
-            };
-        
-            function js_onSuccess() {
-                // remove this to avoid redirect
-                window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-            }
-        
-            function js_onError(error) {
-                // remove this to avoid redirect
-                window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-            }
-        
-            var sendButton = document.getElementById("js_send");
-        
-            function js_send() {
-                sendButton.value='Salje se...';
-                sendButton.disabled=true;
-                var request = new XMLHttpRequest();
-                request.onreadystatechange = function() {
-                    if (request.readyState == 4 && request.status == 200) {
-                        js_onSuccess();
-                    } else
-                    if(request.readyState == 4) {
-                        js_onError(request.response);
-                    }
-                };
-                var email = document.querySelector("#" + form_id_js + " [name='vemail']").value;
-                var number = document.querySelector("#" + form_id_js + " [name='vlastname']").value;
-                var name = document.querySelector("#" + form_id_js + " [name='vname']").value;
-                var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
-                var emailSubj = " Email: ";
-                var aboutMe = " O meni: ";
-                var nameSubj = " Ime: ";
-                var numberSubj = " Broj telefona: "
-                var text = emailSubj.concat(email,nameSubj, name, numberSubj,number, aboutMe, message);
-                data_js['subject'] = "Prijava za Emanet IT Academy";
-                data_js['text'] = text;
-                var params = toParams(data_js);
-        
-                request.open("POST", "https://postmail.invotes.com/send", true);
-                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        
-                request.send(params);
-        
-                return false;
-            }
-        
-            sendButton.onclick = js_send;
-        
-            function toParams(data_js) {
-                var form_data = [];
-                for ( var key in data_js ) {
-                    form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
-                }
-        
-                return form_data.join("&");
-            }
-        
-            var js_form = document.getElementById(form_id_js);
-            js_form.addEventListener("submit", function (e) {
-                e.preventDefault();
-            });
-        </script>
-        <script>
-
         //update this with your js_form selector
-        var form_id_jss = "prijavagrada";
-    
+        var form_id_js = "prijava";
+
         var data_js = {
-            "access_token": "gbfemi1a3zlfdunp18szxtqs"
+            "access_token": "cz6sormi6dcya5x3bhhof9op"
         };
-    
+
         function js_onSuccess() {
             // remove this to avoid redirect
             window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
         }
-    
+
         function js_onError(error) {
             // remove this to avoid redirect
             window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
         }
-    
-        var sendButton = document.getElementById("js_sender");
-    
-        function js_send1() {
-            sendButton.value='Salje se...';
-            sendButton.disabled=true;
+
+        var sendButton = document.getElementById("js_send");
+
+        function js_send() {
+            sendButton.value = 'Salje se...';
+            sendButton.disabled = true;
             var request = new XMLHttpRequest();
             request.onreadystatechange = function() {
                 if (request.readyState == 4 && request.status == 200) {
                     js_onSuccess();
                 } else
-                if(request.readyState == 4) {
+                if (request.readyState == 4) {
+                    js_onError(request.response);
+                }
+            };
+            var email = document.querySelector("#" + form_id_js + " [name='vemail']").value;
+            var number = document.querySelector("#" + form_id_js + " [name='vlastname']").value;
+            var name = document.querySelector("#" + form_id_js + " [name='vname']").value;
+            var message = document.querySelector("#" + form_id_js + " [name='msg']").value;
+            var emailSubj = " Email: ";
+            var aboutMe = " O meni: ";
+            var nameSubj = " Ime: ";
+            var numberSubj = " Broj telefona: "
+            var text = emailSubj.concat(email, nameSubj, name, numberSubj, number, aboutMe, message);
+            data_js['subject'] = "Prijava za Emanet IT Academy";
+            data_js['text'] = text;
+            var params = toParams(data_js);
+
+            request.open("POST", "https://postmail.invotes.com/send", true);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            request.send(params);
+
+            return false;
+        }
+
+        sendButton.onclick = js_send;
+
+        function toParams(data_js) {
+            var form_data = [];
+            for (var key in data_js) {
+                form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+            }
+
+            return form_data.join("&");
+        }
+
+        var js_form = document.getElementById(form_id_js);
+        js_form.addEventListener("submit", function(e) {
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        //update this with your js_form selector
+        var form_id_jss = "prijavagrada";
+
+        var data_js = {
+            "access_token": "gbfemi1a3zlfdunp18szxtqs"
+        };
+
+        function js_onSuccess() {
+            // remove this to avoid redirect
+            window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+        }
+
+        function js_onError(error) {
+            // remove this to avoid redirect
+            window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+        }
+
+        var sendButton = document.getElementById("js_sender");
+
+        function js_send1() {
+            sendButton.value = 'Salje se...';
+            sendButton.disabled = true;
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function() {
+                if (request.readyState == 4 && request.status == 200) {
+                    js_onSuccess();
+                } else
+                if (request.readyState == 4) {
                     js_onError(request.response);
                 }
             };
@@ -365,185 +356,185 @@
             var grad = document.querySelector("#" + form_id_jss + " [name='vsgrad']").value;
             var emailSubj = " Email: ";
             var gradName = " Grad: ";
-            var text = emailSubj.concat(emails,gradName, grad);
+            var text = emailSubj.concat(emails, gradName, grad);
             data_js['subject'] = "Prijava grada za Emanet IT Academy";
             data_js['text'] = text;
             var params = toParams(data_js);
-    
+
             request.open("POST", "https://postmail.invotes.com/send", true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    
+
             request.send(params);
-    
+
             return false;
         }
-    
+
         sendButton.onclick = js_send1;
-    
+
         function toParams(data_js) {
             var form_data = [];
-            for ( var key in data_js ) {
+            for (var key in data_js) {
                 form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
             }
-    
+
             return form_data.join("&");
         }
-    
+
         var js_forms = document.getElementById(form_id_jss);
-        js_forms.addEventListener("ssubmit", function (e) {
+        js_forms.addEventListener("ssubmit", function(e) {
             e.preventDefault();
         });
     </script>
     <script>
-    var masterTL = new TimelineMax({
-  paused:true,
-  delay:1,
-  repeat:-1,
-  yoyo:true
-});
+        var masterTL = new TimelineMax({
+            paused: true,
+            delay: 1,
+            repeat: -1,
+            yoyo: true
+        });
 
-var dur = 0.4,
-    dur2 = 0.5,
-    easing = Power1.easeInOut,
-    easing2 = Power1.easeInOut;
+        var dur = 0.4,
+            dur2 = 0.5,
+            easing = Power1.easeInOut,
+            easing2 = Power1.easeInOut;
 
-TweenMax.set(".dot", {
-  transformStyle: "preserve-3d",
-  transformOrigin: "50% 50%"
-});
+        TweenMax.set(".dot", {
+            transformStyle: "preserve-3d",
+            transformOrigin: "50% 50%"
+        });
 
-masterTL
-.to("#blue", dur, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 0,
-      y: 7
-    }, {
-      x: 0,
-      y: 0
-    }, {
-      x: 25,
-      y: -35
-    }, {
-      x: 53,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing
-},"blueJumpFirst")
+        masterTL
+            .to("#blue", dur, {
+                bezier: {
+                    curviness: 2,
+                    values: [{
+                        x: 0,
+                        y: 7
+                    }, {
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: 25,
+                        y: -35
+                    }, {
+                        x: 53,
+                        y: 0
+                    }],
+                    autoRotate: true
+                },
+                ease: easing
+            }, "blueJumpFirst")
 
-.to("#red", dur2, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 5,
-      y: 0
-    },{
-      x: -53,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing2
-},"blueJumpFirst-=0.1")
+        .to("#red", dur2, {
+            bezier: {
+                curviness: 2,
+                values: [{
+                    x: 5,
+                    y: 0
+                }, {
+                    x: -53,
+                    y: 0
+                }],
+                autoRotate: true
+            },
+            ease: easing2
+        }, "blueJumpFirst-=0.1")
 
-.to("#blue", dur, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 53,
-      y: 7
-    }, {
-      x: 53,
-      y: 0
-    }, {
-      x: 83,
-      y: -35
-    }, {
-      x: 106,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing
-},"blueJumpTwo")
+        .to("#blue", dur, {
+            bezier: {
+                curviness: 2,
+                values: [{
+                    x: 53,
+                    y: 7
+                }, {
+                    x: 53,
+                    y: 0
+                }, {
+                    x: 83,
+                    y: -35
+                }, {
+                    x: 106,
+                    y: 0
+                }],
+                autoRotate: true
+            },
+            ease: easing
+        }, "blueJumpTwo")
 
-/*to("#red", dur, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: -53,
-      y: 7
-    }, {
-      x: -53,
-      y: 0
-    }, {
-      x: 0,
-      y: -35
-    }, {
-      x: 53,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing
-},"blueJumpTwo")*/
+        /*to("#red", dur, {
+          bezier: {
+            curviness: 2,
+            values: [{
+              x: -53,
+              y: 7
+            }, {
+              x: -53,
+              y: 0
+            }, {
+              x: 0,
+              y: -35
+            }, {
+              x: 53,
+              y: 0
+            }],
+            autoRotate: true
+          },
+          ease: easing
+        },"blueJumpTwo")*/
 
-.to("#yellow", dur2, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 5,
-      y: 0
-    },{
-      x: -53,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing2
-},"blueJumpTwo-=0.1")
+        .to("#yellow", dur2, {
+            bezier: {
+                curviness: 2,
+                values: [{
+                    x: 5,
+                    y: 0
+                }, {
+                    x: -53,
+                    y: 0
+                }],
+                autoRotate: true
+            },
+            ease: easing2
+        }, "blueJumpTwo-=0.1")
 
-.to("#blue", dur, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 106,
-      y: 7
-    }, {
-      x: 106,
-      y: 0
-    }, {
-      x: 140,
-      y: -35
-    }, {
-      x: 160,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing
-},"blueJumpThree")
+        .to("#blue", dur, {
+            bezier: {
+                curviness: 2,
+                values: [{
+                    x: 106,
+                    y: 7
+                }, {
+                    x: 106,
+                    y: 0
+                }, {
+                    x: 140,
+                    y: -35
+                }, {
+                    x: 160,
+                    y: 0
+                }],
+                autoRotate: true
+            },
+            ease: easing
+        }, "blueJumpThree")
 
-.to("#green", dur2, {
-  bezier: {
-    curviness: 2,
-    values: [{
-      x: 5,
-      y: 0
-    },{
-      x: -53,
-      y: 0
-    }],
-    autoRotate: true
-  },
-  ease: easing2
-},"blueJumpThree-=0.07")/**/
+        .to("#green", dur2, {
+            bezier: {
+                curviness: 2,
+                values: [{
+                    x: 5,
+                    y: 0
+                }, {
+                    x: -53,
+                    y: 0
+                }],
+                autoRotate: true
+            },
+            ease: easing2
+        }, "blueJumpThree-=0.07") /**/
 
-.progress(1).progress(0)
-.play();
+        .progress(1).progress(0)
+            .play();
     </script>
 
 
@@ -551,44 +542,44 @@ masterTL
 
 </html>
 <style>
-#dots{
-  position:relative;
-  margin:0;
-  /*background:#EEE;*/
-  border:1px solid #DDD;
-  height:175px;
-  width:456px;
-}
-
-#dots .dot{
-  width:27px;
-  height:27px;
-  margin:0;
-  padding:0;
-  display:block;
-  border-radius:50%;
-  position:absolute;
-  top:66px;
-  left:0px;
-}
-
-#dots .blue{
-  background-color:#3284FF;
-  left:133px;
-}
-
-#dots .red{
-  background-color:#FF3424;
-  left:186px;
-}
-
-#dots .yellow{
-  background-color:#FFBB00;
- left:239px;
-}
-
-#dots .green{
-  background-color:#26B14C;
-  left:293px;
-}
+    #dots {
+        position: relative;
+        margin: 0;
+        /*background:#EEE;*/
+        border: 1px solid #DDD;
+        height: 175px;
+        width: 456px;
+    }
+    
+    #dots .dot {
+        width: 27px;
+        height: 27px;
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 66px;
+        left: 0px;
+    }
+    
+    #dots .blue {
+        background-color: #3284FF;
+        left: 133px;
+    }
+    
+    #dots .red {
+        background-color: #FF3424;
+        left: 186px;
+    }
+    
+    #dots .yellow {
+        background-color: #FFBB00;
+        left: 239px;
+    }
+    
+    #dots .green {
+        background-color: #26B14C;
+        left: 293px;
+    }
 </style>

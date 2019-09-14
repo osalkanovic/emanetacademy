@@ -1972,6 +1972,7 @@ pre code {
 }
 
 .row {
+    flex-direction: column;
     margin-right: -15px;
     margin-left: -15px
 }
@@ -5289,8 +5290,7 @@ textarea.input-group-sm>.input-group-btn>.btn {
 }
 
 .navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-}
+.navbar-default .navbar-form {}
 
 .navbar-default .navbar-nav>.open>a,
 .navbar-default .navbar-nav>.open>a:focus,
