@@ -265,7 +265,11 @@ img {
     top: -15px;
     width: 0;
 }
-
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
 .navbar-nav>li>.dropdown-menu li a {
     border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
     color: #fff;
