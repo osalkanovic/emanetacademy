@@ -119,12 +119,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                        <div id="dots">
-                                <div id="blue" class="blue dot"></div>
-                                <div id="red" class="red dot"></div>
-                                <div id="yellow" class="yellow dot"></div>
-                                <div id="green" class="green dot"></div>
-                              </div>
+                       
                     <div class="title_area">
                         <h2 class="title_two">Prijavi se</h2>
                         <span></span>
@@ -166,7 +161,7 @@
                                 <form id="prijavagrada" class="submitphoto_form">
                                     <input  type="text" name="vsgrad" class="wp-form-control wpcf7-text" placeholder="Grad">
                                     <input  type="email" name="vsemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
-                                    <input id="js_sender" type="submit" name="submit" value="Posalji" class="wpcf7-submit">
+                                    <input id="js_sender" type="submit" name="ssubmit" value="Posalji" class="wpcf7-submit">
                                 </form>
                             </div>
                         </div>
@@ -339,7 +334,7 @@
         var form_id_jss = "prijavagrada";
     
         var data_js = {
-            "access_token": "cz6sormi6dcya5x3bhhof9op"
+            "access_token": "gbfemi1a3zlfdunp18szxtqs"
         };
     
         function js_onSuccess() {
@@ -366,11 +361,11 @@
                     js_onError(request.response);
                 }
             };
-            var email = document.querySelector("#" + form_id_jss + " [name='vsemail']").value;
+            var emails = document.querySelector("#" + form_id_jss + " [name='vsemail']").value;
             var grad = document.querySelector("#" + form_id_jss + " [name='vsgrad']").value;
             var emailSubj = " Email: ";
             var gradName = " Grad: ";
-            var text = emailSubj.concat(email,gradName, grad);
+            var text = emailSubj.concat(emails,gradName, grad);
             data_js['subject'] = "Prijava grada za Emanet IT Academy";
             data_js['text'] = text;
             var params = toParams(data_js);
@@ -394,8 +389,8 @@
             return form_data.join("&");
         }
     
-        var js_form = document.getElementById(form_id_jss);
-        js_form.addEventListener("submit", function (e) {
+        var js_forms = document.getElementById(form_id_jss);
+        js_forms.addEventListener("ssubmit", function (e) {
             e.preventDefault();
         });
     </script>
