@@ -48,6 +48,7 @@
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -118,6 +119,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
+                        <div id="dots">
+                                <div id="blue" class="blue dot"></div>
+                                <div id="red" class="red dot"></div>
+                                <div id="yellow" class="yellow dot"></div>
+                                <div id="green" class="green dot"></div>
+                              </div>
                     <div class="title_area">
                         <h2 class="title_two">Prijavi se</h2>
                         <span></span>
@@ -156,9 +163,9 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-8">
                             <div class="contact_form wow fadeInLeft">
-                                <form id="prijavaGrada" class="submitphoto_form">
-                                    <input name="grad" type="text" class="wp-form-control wpcf7-text" placeholder="Grad">
-                                    <input name="email" type="mail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
+                                <form id="prijavagrada" class="submitphoto_form">
+                                    <input  type="text" name="vsgrad" class="wp-form-control wpcf7-text" placeholder="Grad">
+                                    <input  type="email" name="vsemail" class="wp-form-control wpcf7-email" placeholder="Email adresa">
                                     <input id="js_sender" type="submit" name="submit" value="Posalji" class="wpcf7-submit">
                                 </form>
                             </div>
@@ -168,9 +175,9 @@
                                 <h3>Adresa</h3>
                                 <div class="address_group">
                                     <p><span>Adresa: </span> Bijeljinska, 151, Janja, BA</p>
-                                    <p><span>Telefon: </span> 662-807-9585</p>
+            
                                     <p><span>Email: </span>info@emanetit.ba</p>
-                                    <p><span>Dostupni: </span> 12:00h - 15:00h</p>
+                             
                                 </div>
                                 <div class="address_group">
                                     <ul class="footer_social">
@@ -329,7 +336,7 @@
         <script>
 
         //update this with your js_form selector
-        var form_id_js = "prijavaGrada";
+        var form_id_jss = "prijavagrada";
     
         var data_js = {
             "access_token": "cz6sormi6dcya5x3bhhof9op"
@@ -347,7 +354,7 @@
     
         var sendButton = document.getElementById("js_sender");
     
-        function js_send() {
+        function js_send1() {
             sendButton.value='Salje se...';
             sendButton.disabled=true;
             var request = new XMLHttpRequest();
@@ -359,8 +366,8 @@
                     js_onError(request.response);
                 }
             };
-            var email = document.querySelector("#" + form_id_js + " [name='email']").value;
-            var grad = document.querySelector("#" + form_id_js + " [name='grad']").value;
+            var email = document.querySelector("#" + form_id_jss + " [name='vsemail']").value;
+            var grad = document.querySelector("#" + form_id_jss + " [name='vsgrad']").value;
             var emailSubj = " Email: ";
             var gradName = " Grad: ";
             var text = emailSubj.concat(email,gradName, grad);
@@ -376,7 +383,7 @@
             return false;
         }
     
-        sendButton.onclick = js_send;
+        sendButton.onclick = js_send1;
     
         function toParams(data_js) {
             var form_data = [];
@@ -387,13 +394,206 @@
             return form_data.join("&");
         }
     
-        var js_form = document.getElementById(form_id_js);
+        var js_form = document.getElementById(form_id_jss);
         js_form.addEventListener("submit", function (e) {
             e.preventDefault();
         });
+    </script>
+    <script>
+    var masterTL = new TimelineMax({
+  paused:true,
+  delay:1,
+  repeat:-1,
+  yoyo:true
+});
+
+var dur = 0.4,
+    dur2 = 0.5,
+    easing = Power1.easeInOut,
+    easing2 = Power1.easeInOut;
+
+TweenMax.set(".dot", {
+  transformStyle: "preserve-3d",
+  transformOrigin: "50% 50%"
+});
+
+masterTL
+.to("#blue", dur, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 0,
+      y: 7
+    }, {
+      x: 0,
+      y: 0
+    }, {
+      x: 25,
+      y: -35
+    }, {
+      x: 53,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing
+},"blueJumpFirst")
+
+.to("#red", dur2, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 5,
+      y: 0
+    },{
+      x: -53,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing2
+},"blueJumpFirst-=0.1")
+
+.to("#blue", dur, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 53,
+      y: 7
+    }, {
+      x: 53,
+      y: 0
+    }, {
+      x: 83,
+      y: -35
+    }, {
+      x: 106,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing
+},"blueJumpTwo")
+
+/*to("#red", dur, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: -53,
+      y: 7
+    }, {
+      x: -53,
+      y: 0
+    }, {
+      x: 0,
+      y: -35
+    }, {
+      x: 53,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing
+},"blueJumpTwo")*/
+
+.to("#yellow", dur2, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 5,
+      y: 0
+    },{
+      x: -53,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing2
+},"blueJumpTwo-=0.1")
+
+.to("#blue", dur, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 106,
+      y: 7
+    }, {
+      x: 106,
+      y: 0
+    }, {
+      x: 140,
+      y: -35
+    }, {
+      x: 160,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing
+},"blueJumpThree")
+
+.to("#green", dur2, {
+  bezier: {
+    curviness: 2,
+    values: [{
+      x: 5,
+      y: 0
+    },{
+      x: -53,
+      y: 0
+    }],
+    autoRotate: true
+  },
+  ease: easing2
+},"blueJumpThree-=0.07")/**/
+
+.progress(1).progress(0)
+.play();
     </script>
 
 
 </body>
 
 </html>
+<style>
+#dots{
+  position:relative;
+  margin:0;
+  /*background:#EEE;*/
+  border:1px solid #DDD;
+  height:175px;
+  width:456px;
+}
+
+#dots .dot{
+  width:27px;
+  height:27px;
+  margin:0;
+  padding:0;
+  display:block;
+  border-radius:50%;
+  position:absolute;
+  top:66px;
+  left:0px;
+}
+
+#dots .blue{
+  background-color:#3284FF;
+  left:133px;
+}
+
+#dots .red{
+  background-color:#FF3424;
+  left:186px;
+}
+
+#dots .yellow{
+  background-color:#FFBB00;
+ left:239px;
+}
+
+#dots .green{
+  background-color:#26B14C;
+  left:293px;
+}
+</style>
