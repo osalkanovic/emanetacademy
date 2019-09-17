@@ -1121,7 +1121,7 @@
     #box {
         position: relative;
         margin: 20px auto;
-        width: 500px;
+        width: 100%;
         height: 300px;
     }
     
@@ -1130,14 +1130,16 @@
         width: 110px;
         height: 100px;
         position: absolute;
-        top: 0px;
         left: 50%;
+        top: 0px;
         margin-left: -50px;
         -webkit-animation: bounce 2s forwards infinite;
         -moz-animation: bounce 2s forwards infinite;
         -ms-animation: bounce 2s forwards infinite;
         animation: bounce 2.5s forwards infinite;
     }
+    
+    @media all and(max-width:400px) {}
     /* ease-in is slow to fast, when the ball drops */
     /* ease-out is fast to slow, when the ball rebounds */
     
